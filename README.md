@@ -18,6 +18,7 @@ My Curriculum Vitae
 
 ## Work
 - My CV
+- Chrome Extensions
 
 ## Hobby
 - Music

@@ -1,42 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
 <head>
-	<title></title>
+	<meta charset="utf-8">
+	<title>Gavin's CV</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<div class="top-bar">
-		<div class="contact-bar"></div>
+		<!-- <div class="contact-bar"></div> -->
 		<div class="nav-bar">
-			<ul>
+			<ul class="list-box nav-list">
 				<li><a href="#introduction">Introduction</a></li>
 				<li><a href="#skills">Skills</a></li>
 				<li><a href="#education">Education</a></li>
 				<li><a href="#works">Works</a></li>
 				<li><a href="#hobbies">Hobbies</a></li>
-				<li><a href="#social-contact">social contact</a></li>
+				<li><a href="#contacts">Contacts</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="content-wrapper">
 		<div class="box introduction">
-			<h2>Name</h2>
-			<h3>Job</h3>
-			<p>Inroduction</p>
-			<button>Download CV</button>
+			<img src="gavin.jpg" >
+			<h2>Gavin</h2>
+			<h3>Web Devoleper</h3>
+			<div>From dark-as-night charcoal to fluffy light gray, neutrals provide essential UI scaffolding. Loading a system with neutrals, even a few, risks giving teams access to muddy colors. They can also lead to “wireframey” designs. And, neither dark nor light type has sufficiently accessible contrast on a medium gray background.</div>
+			<button class="download-btn" onclick="alert('尚未完成')">Download CV</button>
 		</div>
 		<div class="box skills">
-			<ul>
+			<ul class="list-box">
 				<li>
 					<h2>HTML</h2>
-					<p>Description</p>
+					<p>熟悉常用HTML标签及其使用方法</p>
 				</li>
 				<li>
 					<h2>CSS</h2>
-					<p>Description</p>
+					<p>了解CSS盒模型，浮动，定位，排版等知识</p>
 				</li>
 				<li>
 					<h2>JavaScript</h2>
-					<p>Description</p>
+					<p>了解基本语法，DOM操作</p>
 				</li>
 			</ul>
 		</div>
@@ -46,18 +49,13 @@
 				<h3 class="time">2016-2017</h3>
 				<p></p>
 			</div>
-			<div class="edu-box edu-right-box">
-				<h2>HTML</h2>
+			<div class="edu-box edu-center-box">
+				<h2>CSS</h2>
 				<h3 class="time">2016-2017</h3>
 				<p></p>
 			</div>
 			<div class="edu-box edu-right-box">
-				<h2>HTML</h2>
-				<h3 class="time">2016-2017</h3>
-				<p></p>
-			</div>
-			<div class="edu-box edu-right-box">
-				<h2>HTML</h2>
+				<h2>JavaScript</h2>
 				<h3 class="time">2016-2017</h3>
 				<p></p>
 			</div>
@@ -68,10 +66,52 @@
 				<li class="edu-timeline-dot"></li>
 			</ul>
 		</div>
-		<div class="box works"></div>
-		<div class="box hobbies"></div>
-		<div class="box socail-contact"></div>
+		<div class="box works">
+			<ul class="list-box">
+				<li><a href="#" class="works-link"></a>
+				<span class="works-text"></span>
+				</li>
+				<li><a href="#" class="works-link"></a>
+				<span class="works-text"></span>
+				</li>
+				<li><a href="#" class="works-link"></a>
+				<span class="works-text"></span>
+				</li>
+				<li><a href="#" class="works-link"></a>
+				<span class="works-text"></span>
+				</li>
+			</ul>
+		</div>
+		<div class="box hobbies">
+			<ul class="list-box">
+				<li><a href="#" class="hobbies-link"></a>
+				<span class="works-text">Music</span>
+				</li>
+				<li><a href="#" class="hobbies-link"></a>
+				<span class="works-text">Music</span>
+				</li>
+				<li><a href="#" class="hobbies-link"></a>
+				<span class="works-text">Music</span>
+				</li>
+				<li><a href="#" class="hobbies-link"></a>
+				<span class="works-text">Music</span>
+				</li>
+			</ul>
+		</div>
+		<div class="box socail-contact">
+			<ul class="list-box">
+				<li><a href="#" class="hobbies-link"></a>
+				</li>
+				<li><a href="#" class="hobbies-link"></a>
+				</li>
+				<li><a href="#" class="hobbies-link"></a>
+				</li>
+				<li><a href="#" class="hobbies-link"></a>
+				</li>
+			</ul>
+		</div>
 	</div>
+	<div class="footer"></div>
 
 </body>
 </html>
