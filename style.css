@@ -89,7 +89,7 @@ button:focus {
 }
 /*top-bar*/
 .content-wrapper {
-	/*background-color: #fff;*/ 这个不能有， 不然就不能高斯模糊了
+	/*background-color: #fff;*/ 
 }
 .introduction {
 	overflow: hidden;
