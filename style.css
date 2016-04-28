@@ -1,6 +1,6 @@
 body {
 	text-align: center;
-	font-family: STxihei, Microsoft Yahei, sans-serif;
+	font-family: Microsoft Yahei, sans-serif;
 }
 
 /*css reset*/
@@ -137,6 +137,14 @@ button:focus {
 /*skills*/
 .skills {
 	/*background-color: #37474f;*/
+	padding: 60px 0 80px;
+	background-color: #ddd
+}
+.skills>h2 {
+	margin-bottom: 40px;
+	font-size: 40px;
+	font-family: raleway, stxihei, Microsoft Yahei, sans-serif;
+	font-weight: lighter;
 }
 .skills li {
 	margin-left: 60px;
@@ -158,4 +166,99 @@ button:focus {
 .skills p {
 	text-align: left;
 }
+/*skills*/
+
+.education {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	height: 600px;
+/*	background-color: #ddd;
+	opacity: .99; */
+}
+.education>h1{
+	margin: 40px auto 20px;
+	font-size: 40px;
+	font-family: raleway;
+	color: #333;
+}
+.edu-box {
+	position: absolute;
+	display: inline-block;
+	box-sizing: border-box;
+	width: 380px;
+	padding: 20px 10px;
+	color: #fff;
+	/*text-align: left;*/
+	background-color: #009688;
+	/*box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px ;*/
+}
+.edu-box>p {
+	text-align: left;
+}
+.edu-box-1 {
+	/*top: 124px;*/
+	margin-top: 5px;
+	margin-left: -455px;
+}
+.edu-box-2 {
+	/*top: 222px;*/
+	margin-top: 144px;
+	margin-left: 80px;
+}
+.edu-box-3 {
+	/*top: 240px;*/
+	margin-top: 280px;
+	margin-left: -455px;
+}
+.edu-right-box:before {
+	content: '';
+	position: absolute; /*not absolute error*/
+	z-index: -1;
+	top: 0;
+	left: -15px;
+	width: 0;
+	height: 0;
+	background-color: transparent;
+	/*box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );*/
+	border: 15px solid #009688 ;
+	transform: skewX(45deg);
+}
+.edu-left-box:before {
+	content: '';
+	position: absolute; /*not absolute error*/
+	z-index: -1;
+	top: 0;
+	right: -15px;
+	width: 0;
+	height: 0;
+	background-color: transparent;
+	/*box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );*/
+	border: 15px solid #009688 ;
+	transform: skewX(-45deg);
+}
+.time {
+	color: #ddd;
+}
+.edu-timeline {
+	margin: 0 auto;
+	width: 4px;
+	height: 275px;
+	background: #f08888;
+}
+.edu-timeline-dot {
+	width: 15px;
+	height: 15px;
+	margin-top: 120px;
+	margin-left: -5px;
+	border-radius: 50%;
+	background: #f44336;
+}
+.edu-timeline-dot:first-child {
+	margin-top: 0;
+}
+/*education*/
+
+/*works*/
+
 
