@@ -169,7 +169,7 @@ button:focus {
 /*skills*/
 
 .education {
-	position: relative;
+	/*position: relative;*/
 	overflow: hidden;
 	margin: 0 auto;
 	height: 600px;
@@ -188,10 +188,8 @@ button:focus {
 	box-sizing: border-box;
 	width: 380px;
 	padding: 20px 10px;
-	color: #fff;
-	/*text-align: left;*/
+	color: #fff;z
 	background-color: #009688;
-	/*box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px ;*/
 }
 .edu-box>p {
 	text-align: left;
