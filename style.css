@@ -173,9 +173,9 @@ button:focus {
 	overflow: hidden;
 	margin: 0 auto;
 	height: 600px;
+
+	/*不知为何，不加这个，在IE会整体向左， 而Chrome则向中间*/
 	text-align: left;
-/*	background-color: #ddd;
-	opacity: .99; */
 }
 .education>h1{
 	margin: 40px auto 20px;
@@ -196,21 +196,17 @@ button:focus {
 .edu-box>p {
 	text-align: left; 
 }
+
 .edu-box-1 {
-	top: 140px;
-	/*margin-top: 5px;*/
-	/*margin-left: -80px;*/
+	top: 150px;
 }
 .edu-box-2 {
-	top: 302px;
-	/*margin-top: 144px;*/
-	/*margin-left: 180px;*/
+	top: 290px;
 }
 .edu-box-3 {
-	top: 480px;
-	/*margin-top: 280px;*/
-	/*margin-left: -80px;*/
+	top: 430px;
 }
+
 .edu-right-box {
 	left: 50%;
 	margin-left: 66px;

@@ -3,129 +3,28 @@
 <head>
 	<title></title>
 	<style type="text/css">
-	body {
+	
+	.outer {
 		text-align: center;
-	}
-	.education {
 		position: relative;
-		overflow: hidden;
-		margin: 0 auto;
-		height: 600px;
-	/*	background-color: #ddd;
-		opacity: .99; */
-	}
-	.education>h1{
-		margin: 40px auto 20px;
-		font-size: 40px;
-		font-family: raleway;
-		color: #333;
-	}
-	.edu-box {
-		position: absolute;
-		display: inline-block;
-		box-sizing: border-box;
-		width: 380px;
-		padding: 20px 10px;
-		color: #fff;
-		background-color: #009688;
-	}
-	.edu-box>p {
-		text-align: left;
-	}
-	.edu-box-1 {
-		top: 140px;
-		/*margin-top: 5px;*/
-		/*margin-left: -80px;*/
-	}
-	.edu-box-2 {
-		top: 302px;
-		/*margin-top: 144px;*/
-		/*margin-left: 180px;*/
-	}
-	.edu-box-3 {
-		top: 440px;
-		/*margin-top: 280px;*/
-		/*margin-left: -80px;*/
-	}
-	.edu-right-box:before {
-		content: '';
-		position: absolute; /*not absolute error*/
-		z-index: -1;
-		top: 0;
-		left: -15px;
-		width: 0;
-		height: 0;
-		background-color: transparent;
-		/*box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );*/
-		border: 15px solid #009688 ;
-		transform: skewX(45deg);
-	}
-	.edu-left-box:before {
-		content: '';
-		position: absolute; /*not absolute error*/
-		z-index: -1;
-		top: 0;
-		right: -15px;
-		width: 0;
-		height: 0;
-		background-color: transparent;
-		/*box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );*/
-		border: 15px solid #009688 ;
-		transform: skewX(-45deg);
-	}
-	.time {
-		color: #ddd;
-	}
-	.edu-timeline {
-		position: absolute;
-		left: 50%;
-		margin: 0 auto;
-		width: 4px;
-		height: 275px;
-		background: #f08888;
-	}
-	.edu-timeline-dot {
-		width: 15px;
-		height: 15px;
-		margin-top: 120px;
-		margin-left: -5px;
-		border-radius: 50%;
+		width: 400px;
+		height: 200px;
 		background: #f44336;
 	}
-	.edu-timeline-dot:first-child {
-		margin-top: 0;
+	.inner {
+		/*去掉绝对定位， 居中就正常了*/
+		position: absolute;
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+		background-color: #eee;
 	}
-
-	ul {
-		list-style: none;
-		padding-left: 0;
-	}
+	
 	</style>
 </head>
 <body>
-	<div class="box education" id="education">
-			<h1>Education</h1>
-			<div class="edu-box edu-box-1 edu-left-box ">
-				<h2>HTML</h2>
-				<h3 class="time">2016-2017</h3>
-				<p>From dark-as-night charcoal to fluffy light gray, neutrals provide essential UI scaffolding. Loading a system with neutrals,</p>
-			</div>
-			<div class="edu-box edu-box-2 edu-right-box">
-				<h2>CSS</h2>
-				<h3 class="time">2016-2017</h3>
-				<p>From dark-as-night charcoal to fluffy light gray, neutrals provide essential UI scaffolding. Loading a system with neutrals,</p>
-			</div>
-			<div class="edu-box edu-box-3 edu-left-box">
-				<h2>JavaScript</h2>
-				<h3 class="time">2016-2017</h3>
-				<p>From dark-as-night charcoal to fluffy light gray, neutrals provide essential UI scaffolding. Loading a system with neutrals,</p>
-			</div>
-			<ul class="edu-timeline">
-				<li class="edu-timeline-dot"></li>
-				<li class="edu-timeline-dot"></li>
-				<li class="edu-timeline-dot"></li>
-				<li class="edu-timeline-dot"></li>
-			</ul>
-		</div>
+	<div class="outer">
+		<div class="inner"></div>
+	</div>
 </body>
 </html>
