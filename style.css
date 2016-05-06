@@ -169,45 +169,55 @@ button:focus {
 /*skills*/
 
 .education {
-	/*position: relative;*/
+	position: relative;
 	overflow: hidden;
 	margin: 0 auto;
 	height: 600px;
+	text-align: left;
 /*	background-color: #ddd;
 	opacity: .99; */
 }
 .education>h1{
 	margin: 40px auto 20px;
+	text-align: center;
 	font-size: 40px;
 	font-family: raleway;
 	color: #333;
 }
 .edu-box {
-	position: relative;
+	position: absolute;
 	display: inline-block;
 	box-sizing: border-box;
 	width: 380px;
 	padding: 20px 10px;
-	color: #fff;z
+	color: #fff;
 	background-color: #009688;
 }
 .edu-box>p {
-	text-align: left;
+	text-align: left; 
 }
 .edu-box-1 {
 	top: 140px;
 	/*margin-top: 5px;*/
-	/*margin-left: -455px;*/
+	/*margin-left: -80px;*/
 }
 .edu-box-2 {
 	top: 302px;
 	/*margin-top: 144px;*/
-	/*margin-left: 80px;*/
+	/*margin-left: 180px;*/
 }
 .edu-box-3 {
-	top: 440px;
+	top: 480px;
 	/*margin-top: 280px;*/
-	/*margin-left: -455px;*/
+	/*margin-left: -80px;*/
+}
+.edu-right-box {
+	left: 50%;
+	margin-left: 66px;
+}
+.edu-left-box {
+	right: 50%;
+	margin-right: 66px;
 }
 .edu-right-box:before {
 	content: '';
