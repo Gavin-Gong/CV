@@ -183,7 +183,7 @@ button:focus {
 	color: #333;
 }
 .edu-box {
-	position: absolute;
+	position: relative;
 	display: inline-block;
 	box-sizing: border-box;
 	width: 380px;
@@ -195,19 +195,19 @@ button:focus {
 	text-align: left;
 }
 .edu-box-1 {
-	/*top: 124px;*/
-	margin-top: 5px;
-	margin-left: -455px;
+	top: 140px;
+	/*margin-top: 5px;*/
+	/*margin-left: -455px;*/
 }
 .edu-box-2 {
-	/*top: 222px;*/
-	margin-top: 144px;
-	margin-left: 80px;
+	top: 302px;
+	/*margin-top: 144px;*/
+	/*margin-left: 80px;*/
 }
 .edu-box-3 {
-	/*top: 240px;*/
-	margin-top: 280px;
-	margin-left: -455px;
+	top: 440px;
+	/*margin-top: 280px;*/
+	/*margin-left: -455px;*/
 }
 .edu-right-box:before {
 	content: '';
@@ -239,6 +239,8 @@ button:focus {
 	color: #ddd;
 }
 .edu-timeline {
+	position: absolute;
+	left: 50%;
 	margin: 0 auto;
 	width: 4px;
 	height: 275px;
