@@ -267,4 +267,32 @@ button:focus {
 
 /*works*/
 
+/*works end*/
+
+/*hobbies*/
+.hobbies {
+	background: #eee;
+	padding: 100px 0 130px;
+}
+.hobbies>h1 {
+	margin-bottom: 40px;
+    font-size: 40px;
+    font-family: raleway, stxihei, Microsoft Yahei, sans-serif;
+    font-weight: lighter;
+}
+.hobbies .list-box>li {
+	margin-left: 100px;
+}
+.hobby-link img {
+	display: block;
+	width: 100px;
+	height: 100px;
+}
+.hobbies .hobby-text {
+	display: inline-block;
+	margin-top: 30px;
+}
+
+
+
 
