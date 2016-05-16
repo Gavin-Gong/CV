@@ -46,6 +46,13 @@ button:focus {
 	padding: 40px 0;
 	text-align: center;
 }
+.box>h2 {
+	margin-bottom: 40px;
+	text-align: center;
+    font-size: 40px;
+    font-family: raleway, stxihei, Microsoft Yahei, sans-serif;
+    font-weight: lighter;
+}
 .list-box {
 	display: inline-block;
 	overflow:  hidden;
@@ -118,9 +125,6 @@ button:focus {
 	height: 100px;
 	border-radius: 50%;
 }
-.introduction h2 {
-
-}
 .introduction h3 {
 
 }
@@ -140,12 +144,6 @@ button:focus {
 	padding: 60px 0 80px;
 	background-color: #ddd
 }
-.skills>h2 {
-	margin-bottom: 40px;
-	font-size: 40px;
-	font-family: raleway, stxihei, Microsoft Yahei, sans-serif;
-	font-weight: lighter;
-}
 .skills li {
 	margin-left: 60px;
 	padding-top: 70px;
@@ -160,9 +158,9 @@ button:focus {
 .skills li:nth-child(3) {
 	background: url(js_icon.png) top center no-repeat;
 }
-.skills h2 {
+/*.skills h2 {
 	margin-top: 20px;
-}
+}*/
 .skills p {
 	text-align: left;
 }
@@ -263,7 +261,7 @@ button:focus {
 .edu-timeline-dot:first-child {
 	margin-top: 0;
 }
-/*education*/
+/*education END*/
 
 /*works*/
 
@@ -292,6 +290,32 @@ button:focus {
 	display: inline-block;
 	margin-top: 30px;
 }
+/*hobbies END*/
+
+.social-contact {
+	padding: 80px 0 130px;
+}
+.social-contact .contact-link {
+	display: inline-block;
+
+}
+.contact-link>img {
+	width: 80px;
+	height: 80px;
+}
+/*contact END*/
+.footer {
+	padding: 10px 0 20px;
+	background-color: #bbb;
+}
+.footer>p {
+	color: #444;
+	text-align: center;
+}
+
+
+
+
 
 
 
