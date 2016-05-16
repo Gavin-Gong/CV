@@ -80,11 +80,26 @@ button:focus {
 	text-align: center;
 	
 }
-.nav-list>li {
+.nav-list>li: {
 	
 }
 .nav-list>li:hover {
 	background-color: #f50000;
+}
+.nav-list>li:after {
+	position: relative;
+	top: -4px;
+	display: block;
+	content: '';
+	height: 4px;
+	width: 0;
+	
+	/*width: 130px;*/
+	background-color: #fff;
+}
+.nav-list>li:hover:after {
+	width: 100%;
+
 }
 .nav-list a {
 	display: inline-block;
@@ -191,8 +206,17 @@ button:focus {
 	color: #fff;
 	background-color: #009688;
 }
+.edu-box>h2 {
+	font-weight: normal;
+}
+.edu-box>.time {
+	font-size: 14px;
+	font-weight: normal;
+	color: #EAEAEA;
+}
 .edu-box>p {
-	text-align: left; 
+	text-align: left;
+	margin-top: 10px; 
 }
 
 .edu-box-1 {
@@ -239,9 +263,7 @@ button:focus {
 	border: 15px solid #009688 ;
 	transform: skewX(-45deg);
 }
-.time {
-	color: #ddd;
-}
+
 .edu-timeline {
 	position: absolute;
 	left: 50%;
