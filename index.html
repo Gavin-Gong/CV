@@ -1,74 +1,95 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
-	<meta charset="utf-8">
-	<title>Gavin's CV</title>
-	<meta http-equiv="X-UA-Compatible" content='IE=edge, chrome=1'/>
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
+    <meta charset="utf-8">
+    <title>Gavin's CV</title>
+    <meta http-equiv="X-UA-Compatible" content='IE=edge, chrome=1' />
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
+
 <body>
-	<div class="top-bar">
-		<div class="nav-bar">
-			<ul class="list-box nav-list" id="nav-list">
-				<li><a href="#introduction">Introduction</a></li>
-				<li><a href="#skills">Skills</a></li>
-				<li><a href="#education">Education</a></li>
-				<li><a href="#works">Works</a></li>
-				<li><a href="#hobbies">Hobbies</a></li>
-				<li><a href="#contacts">Contacts</a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="content-wrapper">
-		<div class="box introduction">
-			<img src="images/gavin.jpg" >
-			<h2>Gavin</h2>
-			<h3>前端开发</h3>
-			<div>对互联网世界充满好奇的设计狗，某天突发奇想想用代码画UI，从此踏上前端的踩坑之路，至今还在路上独行，长路漫漫，唯码作伴。</div>
-			<button class="download-btn" onclick="alert('尚未完成')">Download CV</button>
-		</div>
-		<div class="box skills" id="skills">
-		<h2>Skills</h2>
-			<ul class="list-box">
-				<li>
-					<h2>HTML</h2>
-					<p>熟悉常用HTML标签及其使用方法</p>
-				</li>
-				<li>
-					<h2>CSS</h2>
-					<p>了解CSS盒模型，浮动，定位，排版等知识</p>
-				</li>
-				<li>
-					<h2>JavaScript</h2>
-					<p>了解基本语法，DOM操作等知识</p>
-				</li>
-			</ul>
-		</div>
-		<div class="box education" id="education">
-			<h2>Education</h2>
-			<div class="edu-box edu-box-1 edu-left-box ">
-				<h2>HTML&CSS</h2>
-				<h3 class="time">2015.02 —— 2015.10</h3>
-				<p>自学HTML, CSS, CSS3,  </p>
-			</div>
-			<div class="edu-box edu-box-2 edu-right-box">
-				<h2>CSS</h2>
-				<h3 class="time">2015.10——2016.02</h3>
-				<p>初步了解Javascript和JQuery，对前端知识体系形成一个大概的认识</p>
-			</div>
-			<div class="edu-box edu-box-3 edu-left-box">
-				<h2>JavaScript</h2>
-				<h3 class="time">2016.02——至今</h3>
-				<p>学习网格布局系统(Materilize), 实践学习JavaScript,以及学习UI设计课程(专业课程)</p>
-			</div>
-			<ul class="edu-timeline">
-				<li class="edu-timeline-dot"></li>
-				<li class="edu-timeline-dot"></li>
-				<li class="edu-timeline-dot"></li>
-				<!-- <li class="edu-timeline-dot"></li> -->
-			</ul>
-		</div>
-		<!-- <div class="box works" id="works">
+    <div class="top-bar">
+        <div class="nav-bar">
+            <ul class="nav-list" id="nav-list">
+                <li>
+                    <a href="#introduction"></a>
+                </li>
+                <li>
+                    <a href="#skills"></a>
+                </li>
+                <li>
+                    <a href="#education"></a>
+                </li>
+                <li>
+                    <a href="#works"></a>
+                </li>
+                <li>
+                    <a href="#hobbies"></a>
+                </li>
+                <li>
+                    <a href="#contacts"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="box introduction">
+            <div class="inner-box">
+                <img src="images/gavin.jpg">
+                <h2>Gavin</h2>
+                <h3>前端开发</h3>
+                <div class="descr">对互联网世界充满好奇的设计狗，某天突发奇想想用代码画UI，从此踏上前端的踩坑之路，至今还在路上独行，长路漫漫，唯码作伴。</div>
+                <button class="download-btn" onclick="alert('尚未完成')">Download CV</button>
+            </div>
+        </div>
+        <div class="box skills" id="skills">
+            <div class="inner-box">
+                <h2>Skills</h2>
+                <ul class="list-box">
+                    <li>
+                        <h2>HTML</h2>
+                        <p>熟悉常用HTML标签及其使用方法</p>
+                    </li>
+                    <li>
+                        <h2>CSS</h2>
+                        <p>了解CSS盒模型，浮动，定位，排版等知识</p>
+                    </li>
+                    <li>
+                        <h2>JavaScript</h2>
+                        <p>了解基本语法，DOM操作等知识</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box education" id="education">
+            <div class="inner-box">
+                <h2>Education</h2>
+                <div class="edu-box edu-box-1 edu-left-box ">
+                    <h2>HTML&CSS</h2>
+                    <h3 class="time">2015.02 —— 2015.10</h3>
+                    <p>自学HTML, CSS, CSS3, </p>
+                </div>
+                <div class="edu-box edu-box-2 edu-right-box">
+                    <h2>CSS</h2>
+                    <h3 class="time">2015.10——2016.02</h3>
+                    <p>初步了解Javascript和JQuery，对前端知识体系形成一个大概的认识</p>
+                </div>
+                <div class="edu-box edu-box-3 edu-left-box">
+                    <h2>JavaScript</h2>
+                    <h3 class="time">2016.02——至今</h3>
+                    <p>学习网格布局系统(Materilize), 实践学习JavaScript,以及学习UI设计课程(专业课程)</p>
+                </div>
+                <ul class="edu-timeline">
+                    <li class="edu-timeline-dot"></li>
+                    <li class="edu-timeline-dot"></li>
+                    <li class="edu-timeline-dot"></li>
+                    <!-- <li class="edu-timeline-dot"></li> -->
+                </ul>
+                
+            </div>
+        </div>
+        <!-- <div class="box works" id="works">
 			<ul class="list-box">
 				<li><a href="#" class="work-link"></a>
 				<span class="works-text"></span>
@@ -84,46 +105,50 @@
 				</li>
 			</ul>
 		</div> -->
-		<div class="box hobbies">
-		<h2>Hobby</h2>
-			<ul class="list-box">
-				<li><a href="http://music.163.com/#/user/home?id=6938518" class="hobby-link"><img src="images/netease_music_icon.png" alt=""></a>
-				<span class="hobby-text">Music</span>
-				</li>
-				<li><a href="javascript:void();" class="hobby-link"><img src="images/running_icon.png" alt=""></a>
-				<span class="hobby-text">Running</span>
-				</li>
-				<!-- <li><a href="#" class="hobby-link"></a>
+        <div class="box hobbies">
+            <div class="inner-box">
+                <h2>Hobby</h2>
+                <ul class="list-box">
+                    <li>
+                        <a href="http://music.163.com/#/user/home?id=6938518" class="hobby-link"><img src="images/netease_music_icon.png" alt=""></a>
+                        <span class="hobby-text">Music</span>
+                    </li>
+                    <li>
+                        <a href="javascript:void();" class="hobby-link"><img src="images/running_icon.png" alt=""></a>
+                        <span class="hobby-text">Running</span>
+                    </li>
+                    <!-- <li><a href="#" class="hobby-link"></a>
 				<span class="works-text">Music</span>
 				</li>
 				<li><a href="#" class="hobby-link"></a>
 				<span class="works-text">Music</span>
 				</li> -->
-			</ul>
-		</div>
-		<div class="box social-contact">
-			<h2>Contact</h2>
-			<ul class="list-box">
-				<li><a href="javascript:void;" class="contact-link"><img src="images/github_icon.png" alt="GitHub"></a>
-				</li>
-				<li><a href="javascript:void;" class="contact-link"><img src="images/github_icon.png" alt="GitHub"></a>
-				</li>
-				<li><a href="javascript:void;" class="contact-link"><img src="images/github_icon.png" alt="GitHub"></a>
-				</li>
-				<li><a href="javascript:void;" class="contact-link"><img src="images/github_icon.png" alt="GitHub"></a>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class="footer">
-		<p>©</p>
-		<p>all right reserve</p>
-		<p>Design By Gavin</p>
-	</div>
-
-	<!-- javascript -->
-	<script src="scripts/jquery-1.12.3.js"></script>
-	<script src="scripts/script.js"></script>
-
+                </ul>
+            </div>
+        </div>
+        <div class="box social-contact">
+            <div class="inner-box">
+                <h2>Contact</h2>
+                <ul class="list-box">
+                    <li>
+                        <a href="javascript:void;" class="contact-link"><img src="images/github_icon.png" alt="GitHub"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void;" class="contact-link"><img src="images/github_icon.png" alt="GitHub"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void;" class="contact-link"><img src="images/github_icon.png" alt="GitHub"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void;" class="contact-link"><img src="images/github_icon.png" alt="GitHub"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- javascript -->
+    <script src="scripts/jquery-1.12.3.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>

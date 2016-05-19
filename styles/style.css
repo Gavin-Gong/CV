@@ -39,23 +39,35 @@ button:focus {
 	outline: none;
 }
 .box {
+	position: relative; 
 	margin: 0 auto;
 	padding: 40px 0;
 	text-align: center;
 	box-sizing: border-box;
 }
-.box>h2 {
+.inner-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: inline-box;
+	text-align: center;
+}
+
+.box h2 {
 	margin-bottom: 40px;
 	text-align: center;
     font-size: 40px;
     font-family: raleway, stxihei, Microsoft Yahei, sans-serif;
     font-weight: lighter;
 }
+.inner-box>h2 {
+	font-size: 30px!important;
+}
 .list-box {
 	display: inline-block;
 	overflow:  hidden;
 	margin: 0 auto;
-	/*width: 80%;*/
 }
 .list-box>li {
 	float: left;
@@ -74,55 +86,34 @@ body {
 .top-bar {
 	position: fixed;
 	z-index: 100;
-	width: 100%;
-	background-color: #009688;
+	top: 50%;
+	right: 30px;
+	transform: translate(0, -50%);
 }
-.nav-bar {
-	height: 60px; 为什么会显示64px
+.nav-list>li {
+	margin-top: 10px;
 }
-.nav-list {
-	text-align: center;
-	
+.nav-list>li:first-child {
+	margin-top: 0;
 }
-.nav-list>li{
-	position: relative;
-}
-#nav-list>li {
-
-}
-.nav-list>li:hover {
-	/*background-color: #f50000;*/
-
-}
-.nav-list>li::after {
-	/*position: relative;*/
-	position: absolute;
-	margin: auto;
-	bottom: 0;
+.nav-list>li>a {
 	display: block;
-	content: '';
-	height: 3px;
-	width: 0;
-	background-color: #fff;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: rgba(0, 150, 136, 0.53);
+	cursor: pointer;
 }
-.nav-list>li:hover::after {
-	width: 100%;
-	transition: all 222ms ease-out;
-}
-.nav-list a {
-	display: inline-block;
-	width: 130px;
-	height: 60px;
-	color: #fff;
-	font-size: 16px;
-	font-weight: lighter;
-	line-height: 60px;
-}
+
+
+
+
 /*top-bar*/
 .content-wrapper {
 	/*background-color: #fff;*/ 
 
-	margin-top: 60px;
+
+	/*margin-top: 60px;*/
 }
 .introduction {
 	overflow: hidden;
@@ -140,8 +131,6 @@ body {
 	left: 0;
 	right: 0;
 	margin: -30px;
-	/*background-color: black;*/
-	/*opacity: 0.6;*/
 	z-index: -1;
 	background: url(../images/banner.jpg) center center no-repeat;
 	-webkit-filter: blur(20px);
@@ -151,17 +140,15 @@ body {
 	height: 100px;
 	border-radius: 50%;
 }
-.introduction h3 {
-
-}
-.introduction div {
+.introduction .descr{
 	margin: 20px auto;
-	/*display: block;*/
+	display: block;
 	width: 50%;
 	text-align: justify;
 }
-.introduction>.download-btn {
-	margin-top: 40px;
+
+.download-btn {
+	margin-top: 60px;
 }
 
 /*skills*/
@@ -171,9 +158,9 @@ body {
 	background-color: #ddd
 }
 .skills li {
-	margin-left: 60px;
+	margin-left: 50px;
 	padding-top: 70px;
-	width: 200px;
+	width: 140px;
 }
 .skills li:first-child {
 	background: url(../images/html_icon.png) top center no-repeat;
@@ -184,11 +171,13 @@ body {
 .skills li:nth-child(3) {
 	background: url(../images/js_icon.png) top center no-repeat;
 }
-/*.skills h2 {
-	margin-top: 20px;
-}*/
+
+.skills h2 {
+	font-size: 20px;
+}
 .skills p {
 	text-align: left;
+	font-size: 14px;
 }
 /*skills*/
 
@@ -220,12 +209,12 @@ body {
 .edu-box>h2 {
 	font-weight: normal;
 }
-.edu-box>.time {
+.edu-box .time {
 	font-size: 14px;
 	font-weight: normal;
 	color: #EAEAEA;
 }
-.edu-box>p {
+.edu-box p {
 	text-align: left;
 	margin-top: 10px; 
 }
@@ -337,14 +326,6 @@ body {
 	height: 80px;
 }
 /*contact END*/
-.footer {
-	padding: 10px 0 20px;
-	background-color: #bbb;
-}
-.footer>p {
-	color: #444;
-	text-align: center;
-}
 
 
 
