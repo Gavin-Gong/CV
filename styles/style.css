@@ -1,7 +1,4 @@
-body {
-	text-align: center;
-	font-family: Microsoft Yahei, sans-serif;
-}
+
 
 /*css reset*/
 ul, ol {
@@ -45,6 +42,14 @@ button:focus {
 	margin: 0 auto;
 	padding: 40px 0;
 	text-align: center;
+	box-sizing: border-box;
+}
+.box>h2 {
+	margin-bottom: 40px;
+	text-align: center;
+    font-size: 40px;
+    font-family: raleway, stxihei, Microsoft Yahei, sans-serif;
+    font-weight: lighter;
 }
 .list-box {
 	display: inline-block;
@@ -60,36 +65,64 @@ button:focus {
 	margin-left: 0!important;
 }
 
+body {
+	padding-top: 1px;
+	text-align: center;
+	font-family: Microsoft Yahei, sans-serif;
+}
 /*top-bar*/
 .top-bar {
+	position: fixed;
+	z-index: 100;
 	width: 100%;
-	/*height: 60px;*/
-	background-color: #f44336;
+	background-color: #009688;
 }
 .nav-bar {
-	height: 80px; /*为什么会显示85px*/
+	height: 60px; 为什么会显示64px
 }
 .nav-list {
 	text-align: center;
 	
 }
-.nav-list>li {
-	
+.nav-list>li{
+	position: relative;
+}
+#nav-list>li {
+
 }
 .nav-list>li:hover {
-	background-color: #f50000;
+	/*background-color: #f50000;*/
+
+}
+.nav-list>li::after {
+	/*position: relative;*/
+	position: absolute;
+	margin: auto;
+	bottom: 0;
+	display: block;
+	content: '';
+	height: 3px;
+	width: 0;
+	background-color: #fff;
+}
+.nav-list>li:hover::after {
+	width: 100%;
+	transition: all 222ms ease-out;
 }
 .nav-list a {
 	display: inline-block;
 	width: 130px;
-	height: 80px;
+	height: 60px;
 	color: #fff;
-	font-size: 20px;
-	line-height: 80px;
+	font-size: 16px;
+	font-weight: lighter;
+	line-height: 60px;
 }
 /*top-bar*/
 .content-wrapper {
 	/*background-color: #fff;*/ 
+
+	margin-top: 60px;
 }
 .introduction {
 	overflow: hidden;
@@ -110,16 +143,13 @@ button:focus {
 	/*background-color: black;*/
 	/*opacity: 0.6;*/
 	z-index: -1;
-	background: url(banner.jpg) center center no-repeat;
+	background: url(../images/banner.jpg) center center no-repeat;
 	-webkit-filter: blur(20px);
 }
 .introduction img {
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
-}
-.introduction h2 {
-
 }
 .introduction h3 {
 
@@ -140,29 +170,23 @@ button:focus {
 	padding: 60px 0 80px;
 	background-color: #ddd
 }
-.skills>h2 {
-	margin-bottom: 40px;
-	font-size: 40px;
-	font-family: raleway, stxihei, Microsoft Yahei, sans-serif;
-	font-weight: lighter;
-}
 .skills li {
 	margin-left: 60px;
 	padding-top: 70px;
 	width: 200px;
 }
 .skills li:first-child {
-	background: url(html_icon.png) top center no-repeat;
+	background: url(../images/html_icon.png) top center no-repeat;
 }
 .skills li:nth-child(2){
-	background: url(css_icon.png) top center no-repeat;
+	background: url(../images/css_icon.png) top center no-repeat;
 }
 .skills li:nth-child(3) {
-	background: url(js_icon.png) top center no-repeat;
+	background: url(../images/js_icon.png) top center no-repeat;
 }
-.skills h2 {
+/*.skills h2 {
 	margin-top: 20px;
-}
+}*/
 .skills p {
 	text-align: left;
 }
@@ -173,11 +197,13 @@ button:focus {
 	overflow: hidden;
 	margin: 0 auto;
 	height: 600px;
-/*	background-color: #ddd;
-	opacity: .99; */
+
+	/*不知为何，不加这个，在IE会整体向左， 而Chrome则向中间*/
+	text-align: left;
 }
 .education>h1{
 	margin: 40px auto 20px;
+	text-align: center;
 	font-size: 40px;
 	font-family: raleway;
 	color: #333;
@@ -189,27 +215,38 @@ button:focus {
 	width: 380px;
 	padding: 20px 10px;
 	color: #fff;
-	/*text-align: left;*/
 	background-color: #009688;
-	/*box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px ;*/
+}
+.edu-box>h2 {
+	font-weight: normal;
+}
+.edu-box>.time {
+	font-size: 14px;
+	font-weight: normal;
+	color: #EAEAEA;
 }
 .edu-box>p {
 	text-align: left;
+	margin-top: 10px; 
 }
+
 .edu-box-1 {
-	/*top: 124px;*/
-	margin-top: 5px;
-	margin-left: -455px;
+	top: 150px;
 }
 .edu-box-2 {
-	/*top: 222px;*/
-	margin-top: 144px;
-	margin-left: 80px;
+	top: 290px;
 }
 .edu-box-3 {
-	/*top: 240px;*/
-	margin-top: 280px;
-	margin-left: -455px;
+	top: 430px;
+}
+
+.edu-right-box {
+	left: 50%;
+	margin-left: 66px;
+}
+.edu-left-box {
+	right: 50%;
+	margin-right: 66px;
 }
 .edu-right-box:before {
 	content: '';
@@ -237,10 +274,10 @@ button:focus {
 	border: 15px solid #009688 ;
 	transform: skewX(-45deg);
 }
-.time {
-	color: #ddd;
-}
+
 .edu-timeline {
+	position: absolute;
+	left: 50%;
 	margin: 0 auto;
 	width: 4px;
 	height: 275px;
@@ -257,8 +294,62 @@ button:focus {
 .edu-timeline-dot:first-child {
 	margin-top: 0;
 }
-/*education*/
+/*education END*/
 
 /*works*/
+
+/*works end*/
+
+/*hobbies*/
+.hobbies {
+	background: #eee;
+	padding: 100px 0 130px;
+}
+.hobbies>h1 {
+	margin-bottom: 40px;
+    font-size: 40px;
+    font-family: raleway, stxihei, Microsoft Yahei, sans-serif;
+    font-weight: lighter;
+}
+.hobbies .list-box>li {
+	margin-left: 100px;
+}
+.hobby-link img {
+	display: block;
+	width: 100px;
+	height: 100px;
+}
+.hobbies .hobby-text {
+	display: inline-block;
+	margin-top: 30px;
+}
+/*hobbies END*/
+
+.social-contact {
+	padding: 80px 0 130px;
+}
+.social-contact .contact-link {
+	display: inline-block;
+
+}
+.contact-link>img {
+	width: 80px;
+	height: 80px;
+}
+/*contact END*/
+.footer {
+	padding: 10px 0 20px;
+	background-color: #bbb;
+}
+.footer>p {
+	color: #444;
+	text-align: center;
+}
+
+
+
+
+
+
 
 
