@@ -5,12 +5,12 @@
 	function scrollToView(index) {
 	    if (index != null) {
 	    	document.body.scrollTop = index * window.innerHeight;
-	    	console.log(document.body.scrollTop);
+	    	// console.log(document.body.scrollTop);
 	    }
 	}
 	//通过获取a标签的index, 获取要显示的部分
 	function getViewIndex(event) {
-	    console.log(event.target.nodeName);
+	    // console.log(event.target.nodeName);
 	    if (event.target.nodeName.toLowerCase() == "a") {
 	        var index = event.target.dataset.index;
 	        return index;
@@ -25,7 +25,7 @@
 	    // clear curr-dot class
 	    
 	    // add target with class
-	    console.log(currEle.nodeName.toLowerCase());
+	    // console.log(currEle.nodeName.toLowerCase());
 	    if(currEle.nodeName.toLowerCase() == "a") {
 	    	for (var i = 0, len = links.length; i < len; i++) {
 	        links[i].className = links[i].className.replace("curr-dot", '');  // api还是不太熟悉
