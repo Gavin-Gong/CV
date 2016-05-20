@@ -3,10 +3,10 @@
 	var linkBox = document.querySelector("#nav-list");
 	// 传入要显示的元素
 	function scrollToView(index) {
-	    document.body.scrollTop = index * window.innerHeight;
-	    console.log(document.body.scrollTop);
-
-
+	    if (index != null) {
+	    	document.body.scrollTop = index * window.innerHeight;
+	    	console.log(document.body.scrollTop);
+	    }
 	}
 	//通过获取a标签的index, 获取要显示的部分
 	function getViewIndex(event) {
@@ -14,6 +14,8 @@
 	    if (event.target.nodeName.toLowerCase() == "a") {
 	        var index = event.target.dataset.index;
 	        return index;
+	    } else {
+	    	return null;
 	    }
 	}
 	// 不用event参数
@@ -21,12 +23,13 @@
 	    // Links
 	    var links = document.querySelectorAll('[data-index]');
 	    // clear curr-dot class
-	    for (var i = 0, len = links.length; i < len; i++) {
-	        links[i].className = links[i].className.replace("curr-dot", '');  // api还是不太熟悉
-	    }
+	    
 	    // add target with class
 	    console.log(currEle.nodeName.toLowerCase());
 	    if(currEle.nodeName.toLowerCase() == "a") {
+	    	for (var i = 0, len = links.length; i < len; i++) {
+	        links[i].className = links[i].className.replace("curr-dot", '');  // api还是不太熟悉
+	    	}
 	    	currEle.className += "curr-dot";
 	    }
 	}
