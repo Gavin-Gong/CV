@@ -112,13 +112,10 @@ body {
 .curr-dot {
 	background: rgba(0, 150, 136, 0.9)!important;
 }
-
-
-
 /*top-bar*/
 .content-wrapper {
 	/*background-color: #fff;*/ 
-	position: absolute;
+	/*position: absolute;*/
 	overflow: hidden;
 
 
