@@ -5,7 +5,8 @@
 	// 传入要显示的元素
 	function scrollToView(index) {
 	    if (index != null) {
-	    	document.body.scrollTop = index * window.innerHeight;
+	    	// document.body.scrollTop = index * window.innerHeight;
+	    	$("body").scrollTop(index * window.innerHeight);
 	    	// console.log(document.body.scrollTop);
 	    }
 	}
