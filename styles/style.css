@@ -39,6 +39,9 @@ button:focus {
 	outline: none;
 }
 .box {
+	/*height debug*/
+	/*height: 600px;*/
+	/*用作盒子居中*/
 	position: relative; 
 	margin: 0 auto;
 	padding: 40px 0;
@@ -48,10 +51,12 @@ button:focus {
 }
 
 .inner-box {
+	/*slide 内容垂直水平居中*/
+	min-width: 1000px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	/*width: 100%;*/
 	/*height: 100%*/
 	transform: translate(-50%, -50%);
@@ -116,7 +121,14 @@ body {
 .content-wrapper {
 	/*background-color: #fff;*/ 
 	/*position: absolute;*/
+<<<<<<< HEAD
 	overflow: hidden;
+=======
+	/*overflow: hidden;*/
+
+
+	/*margin-top: 60px;*/
+>>>>>>> refs/remotes/origin/master
 }
 .introduction {
 	overflow: hidden;
@@ -189,12 +201,13 @@ body {
 
 .education {
 	position: relative;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	margin: 0 auto;
 	height: 600px;
 
 	/*不知为何，不加这个，在IE会整体向左， 而Chrome则向中间*/
 	text-align: left;
+	background-color: #eee;
 }
 .education>h1{
 	margin: 40px auto 20px;
@@ -204,16 +217,24 @@ body {
 	color: #333;
 }
 .edu-box {
-	position: absolute;
 	display: inline-block;
 	box-sizing: border-box;
-	width: 380px;
-	padding: 20px 10px;
 	color: #fff;
-	background-color: #009688;
+	
 }
-.edu-box>h2 {
+.edu-box>li {
+	box-sizing: border-box;
+	width: 200px;
+	height: 200px;
+	margin-left: 20px;
+	padding: 20px 10px;
+	background-color: #009688;
+	border-radius: 5px;
+}
+.edu-box h2 {
+	margin-bottom: 10px;
 	font-weight: normal;
+	font-size: 20px;
 }
 .edu-box .time {
 	font-size: 14px;
@@ -223,73 +244,15 @@ body {
 .edu-box p {
 	text-align: left;
 	margin-top: 10px; 
+	font-size: 14px;
 }
 
-.edu-box-1 {
-	top: 150px;
-}
-.edu-box-2 {
-	top: 290px;
-}
-.edu-box-3 {
-	top: 430px;
-}
 
-.edu-right-box {
-	left: 50%;
-	margin-left: 66px;
-}
-.edu-left-box {
-	right: 50%;
-	margin-right: 66px;
-}
-.edu-right-box:before {
-	content: '';
-	position: absolute; /*not absolute error*/
-	z-index: -1;
-	top: 0;
-	left: -15px;
-	width: 0;
-	height: 0;
-	background-color: transparent;
-	/*box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );*/
-	border: 15px solid #009688 ;
-	transform: skewX(45deg);
-}
-.edu-left-box:before {
-	content: '';
-	position: absolute; /*not absolute error*/
-	z-index: -1;
-	top: 0;
-	right: -15px;
-	width: 0;
-	height: 0;
-	background-color: transparent;
-	/*box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );*/
-	border: 15px solid #009688 ;
-	transform: skewX(-45deg);
-}
 
-.edu-timeline {
-	position: absolute;
-	left: 50%;
-	margin: 0 auto;
-	width: 4px;
-	height: 275px;
-	background: #f08888;
-}
-.edu-timeline-dot {
-	width: 15px;
-	height: 15px;
-	margin-top: 120px;
-	margin-left: -5px;
-	border-radius: 50%;
-	background: #f44336;
-}
-.edu-timeline-dot:first-child {
-	margin-top: 0;
-}
-/*education END*/
+
+
+
+.cation END*/
 
 /*works*/
 
