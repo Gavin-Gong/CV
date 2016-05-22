@@ -66,18 +66,23 @@ ScrollView.prototype.setFSHeight = function() {
 }
 
 ScrollView.prototype.init = function() {
+	var self = this;
+	console.log(this);
 	this.setFSHeight(this.viewCollection);
 	// add Eventlistenr
-	this.linkBox.addEventListener("click", this.clickHandler);
-	document.addEventListener("mousewheel", this.wheelHandler);
-	window.addEventListener("resize", function() {
-	    // this.setFSHeight(this.viewCollection); // problem call apply bind?
-	    setFSHeight.call(ScrollView, viewCollection);
-	}, false);
+	
 }
 
 var viewCollection = document.getElementsByClassName("box");
 var linkCollection = document.querySelectorAll("[data-index]");
 var linkBox = document.querySelector("#nav-list");
 var configData = {viewCollection, linkCollection, linkBox};
+
 var scrollveiw = new ScrollView(configData);
+
+	scrollveiw.linkBox.addEventListener("click", scrollveiw.clickHandler);
+	document.addEventListener("mousewheel", scrollveiw.wheelHandler);
+	window.addEventListener("resize", function() {
+	    // this.setFSHeight(this.viewCollection); // problem call apply bind?
+	    setFSHeight.call(ScrollView, viewCollection);
+	}, false);
