@@ -46,6 +46,8 @@ button:focus {
 	margin: 0 auto;
 	padding: 40px 0;
 	width: 100%;
+	width: 100vw;
+	height: 100vh;
 	text-align: center;
 	box-sizing: border-box;
 }
@@ -120,10 +122,11 @@ body {
 /*top-bar*/
 .content-wrapper {
 	/*background-color: #fff;*/ 
-	/*position: absolute;*/
+	position: absolute;
 
 	overflow: hidden;
-
+	/*height: 100vh;*/
+	/*width: 100vw;*/
 	/*overflow: hidden;*/
 
 

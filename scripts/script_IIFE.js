@@ -1,12 +1,16 @@
 var viewCol = document.getElementsByClassName("box");
+var viewBox = document.querySelector(".content-wrapper");
 var linkCol = document.querySelectorAll("[data-index]");
 var linkBox = document.querySelector("#nav-list");
-var config = {viewCol, linkCol, linkBox};
+
+var config = {viewCol, viewBox, linkCol, linkBox};
 
 (function(config) {
 	function scrollToView(index) {
 	    if (index != null) {
-	    	document.body.scrollTop = index * window.innerHeight;
+	    	// document.body.scrollTop = index * window.innerHeight;
+	    	config.viewBox.style.top = -(index * window.innerHeight) + 'px';
+
 	    }
 	}
 	//通过获取a标签的index, 获取要显示的部分
