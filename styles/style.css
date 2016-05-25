@@ -247,9 +247,6 @@ body {
 
 
 
-
-.cation END*/
-
 /*works*/
 
 /*works end*/
@@ -281,6 +278,9 @@ body {
 
 .social-contact {
 	padding: 80px 0 130px;
+}
+.social-contact .inner-box {
+	transform: translate(-50%, -100%);
 }
 .social-contact .contact-link {
 	display: inline-block;
