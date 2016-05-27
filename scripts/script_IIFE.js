@@ -1,7 +1,7 @@
 var viewCol = document.getElementsByClassName("box");
 var linkCol = document.querySelectorAll("[data-index]");
 var linkBox = document.querySelector("#nav-list");
-var config = {viewCol, linkCol, linkBox};
+var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox};
 
 (function(config) {
 	function scrollToView(index) {
