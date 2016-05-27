@@ -1,12 +1,22 @@
 var viewCol = document.getElementsByClassName("box");
 var linkCol = document.querySelectorAll("[data-index]");
 var linkBox = document.querySelector("#nav-list");
+var viewPort = document.querySelector(".content-wrapper");
 var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox};
 
 (function(config) {
+	// scrollTop
+	// function scrollToView(index) {
+	//     if (index != null) {
+	//     	document.body.scrollTop = index * window.innerHeight;
+	//     }
+	// }
+
+	// Position 
 	function scrollToView(index) {
 	    if (index != null) {
-	    	document.body.scrollTop = index * window.innerHeight;
+	    	// document.body.scrollTop = -index * window.innerHeight;
+	    	viewPort.style.top = -(index * window.innerHeight) + "px";
 	    }
 	}
 	//通过获取a标签的index, 获取要显示的部分

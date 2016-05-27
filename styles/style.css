@@ -106,6 +106,7 @@ body {
 }
 /*top-bar*/
 .content-wrapper {
+	position: relative;
 	/*background-color: #fff;*/ 
 	/*position: absolute;*/
 	/*overflow: hidden;*/
