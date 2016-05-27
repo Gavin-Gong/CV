@@ -2,7 +2,8 @@ var viewCol = document.getElementsByClassName("box");
 var linkCol = document.querySelectorAll("[data-index]");
 var linkBox = document.querySelector("#nav-list");
 var viewPort = document.querySelector(".content-wrapper");
-var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox};
+var innerBox = document.querySelectorAll(".inner-box");
+var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerBox};
 
 (function(config) {
 	// Position 
@@ -10,6 +11,9 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox};
 	    if (index != null) {
 	    	// document.body.scrollTop = -index * window.innerHeight;
 	    	viewPort.style.top = -(index * window.innerHeight) + "px";
+	    	viewPortAniamte(index, config.innerBox);
+
+
 	    }
 	}
 	//通过获取a标签的index, 获取要显示的部分
@@ -27,7 +31,6 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox};
 	    // clear curr-dot class
 	    
 	    // add target with class
-	    console.log(currEle);
 	    if(currEle.nodeName.toLowerCase() == "a") {
 	    	for (var i = 0, len = config.linkCol.length; i < len; i++) {
 	        config.linkCol[i].className = config.linkCol[i].className.replace("curr-dot", '');  // api还是不太熟悉
@@ -49,8 +52,8 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox};
 	    var preIndex = currIndex - 1;
 	    var nextIndex = currIndex + 1;
 
-	    console.log(currIndex);
-	    console.log(event.wheelDelta);
+	    // console.log(currIndex);
+	    // console.log(event.wheelDelta);
 	    // 向上滚动
 	    if(event.wheelDelta > 0 && currIndex > 0) {
 	    	scrollToView(preIndex);
@@ -71,6 +74,56 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox};
 	        Elements[i].style.height = FS + 'px';
 	    }
 	}
+
+	// Animate Function
+	function addAniamate(Element, MotionName) {
+		Element.className += " animated " + MotionName
+	}
+	function removeAnimate(Element, MotionName) {
+		Element.className = Element.className.replace('animated', "");
+		Element.className = Element.className.replace(MotionName);
+		console.log(Element.className);
+	}
+	// 
+	function viewPortAniamte(index,innerBox) {
+		switch (index) {
+
+			case 0: 
+				addAniamate(innerBox[index], "fadeInDown");
+				setTimeout(function() {
+					removeAnimate(innerBox[index], "fadeInDown")
+				}, 1000);
+				break;
+			case 1:
+				addAniamate(innerBox[index], "fadeInDown");
+				setTimeout(function() {
+					removeAnimate(innerBox[index], "fadeInDown")
+				}, 1000);
+				break;
+			case 2:
+				addAniamate(innerBox[index], "fadeInDown");
+				setTimeout(function() {
+					removeAnimate(innerBox[index], "fadeInDown")
+				}, 1000);
+				break;
+			case 3:
+				addAniamate(innerBox[index], "fadeInDown");
+				setTimeout(function() {
+					removeAnimate(innerBox[index], "fadeInDown")
+				}, 1000);
+				break;
+			case 4:
+				addAniamate(innerBox[index], "fadeInDown");
+				setTimeout(function() {
+					removeAnimate(innerBox[index], "fadeInDown")
+				}, 1000);
+				break;
+
+			default:
+				console.log("index overflow")
+				break;
+		}
+	} 
 
 	// 初始化全屏高度
 	setFSHeight(config.viewCol);
