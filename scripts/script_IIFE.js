@@ -5,13 +5,6 @@ var viewPort = document.querySelector(".content-wrapper");
 var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox};
 
 (function(config) {
-	// scrollTop
-	// function scrollToView(index) {
-	//     if (index != null) {
-	//     	document.body.scrollTop = index * window.innerHeight;
-	//     }
-	// }
-
 	// Position 
 	function scrollToView(index) {
 	    if (index != null) {
