@@ -12,8 +12,6 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
 	    	// document.body.scrollTop = -index * window.innerHeight;
 	    	viewPort.style.top = -(index * window.innerHeight) + "px";
 	    	viewPortAniamte(index, config.innerBox);
-
-
 	    }
 	}
 	//通过获取a标签的index, 获取要显示的部分
@@ -29,7 +27,6 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
 	// 不用event参数
 	function setDotClass(currEle) {
 	    // clear curr-dot class
-	    
 	    // add target with class
 	    if(currEle.nodeName.toLowerCase() == "a") {
 	    	for (var i = 0, len = config.linkCol.length; i < len; i++) {
@@ -80,14 +77,15 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
 		Element.className += " animated " + MotionName
 	}
 	function removeAnimate(Element, MotionName) {
-		Element.className = Element.className.replace('animated', "");
-		Element.className = Element.className.replace(MotionName);
+		Element.className = Element.className.replace(' animated', "");
+		Element.className = Element.className.replace(" " + MotionName, "");
 		console.log(Element.className);
 	}
-	// 
+
+	// Animate Setting
+	// 延时1000ms 删除， 因为动画时间长为1000ms
 	function viewPortAniamte(index,innerBox) {
 		switch (index) {
-
 			case 0: 
 				addAniamate(innerBox[index], "fadeInDown");
 				setTimeout(function() {
