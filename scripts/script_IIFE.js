@@ -1,12 +1,17 @@
 var viewCol = document.getElementsByClassName("box");
 var linkCol = document.querySelectorAll("[data-index]");
 var linkBox = document.querySelector("#nav-list");
-var config = {viewCol, linkCol, linkBox};
+var viewPort = document.querySelector(".content-wrapper");
+var innerBox = document.querySelectorAll(".inner-box");
+var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerBox};
 
 (function(config) {
+	// Position 
 	function scrollToView(index) {
 	    if (index != null) {
-	    	document.body.scrollTop = index * window.innerHeight;
+	    	// document.body.scrollTop = -index * window.innerHeight;
+	    	viewPort.style.top = -(index * window.innerHeight) + "px";
+	    	viewPortAniamte(index, config.innerBox);
 	    }
 	}
 	//通过获取a标签的index, 获取要显示的部分
@@ -22,9 +27,7 @@ var config = {viewCol, linkCol, linkBox};
 	// 不用event参数
 	function setDotClass(currEle) {
 	    // clear curr-dot class
-	    
 	    // add target with class
-	    console.log(currEle);
 	    if(currEle.nodeName.toLowerCase() == "a") {
 	    	for (var i = 0, len = config.linkCol.length; i < len; i++) {
 	        config.linkCol[i].className = config.linkCol[i].className.replace("curr-dot", '');  // api还是不太熟悉
@@ -46,14 +49,11 @@ var config = {viewCol, linkCol, linkBox};
 	    var preIndex = currIndex - 1;
 	    var nextIndex = currIndex + 1;
 
-	    console.log(currIndex);
-	    console.log(event.wheelDelta);
-	    // 向上滚动
-	    if(event.wheelDelta > 0 && currIndex > 0) {
+	    if(event.deltaY < 0 && currIndex > 0) {
 	    	scrollToView(preIndex);
 	    	setDotClass(config.linkCol[preIndex]);
 
-	    } else if(event.wheelDelta < 0 && currIndex < config.linkCol.length-1) {
+	    } else if(event.deltaY > 0 && currIndex < config.linkCol.length-1) {
 	    	scrollToView(nextIndex);
 	    	setDotClass(config.linkCol[nextIndex]);
 	    }
@@ -69,12 +69,64 @@ var config = {viewCol, linkCol, linkBox};
 	    }
 	}
 
+	// Animate Function
+	function addAniamate(Element, MotionName) {
+		Element.className += " animated " + MotionName
+	}
+	function removeAnimate(Element, MotionName) {
+		Element.className = Element.className.replace(' animated', "");
+		Element.className = Element.className.replace(" " + MotionName, "");
+		console.log(Element.className);
+	}
+
+	// Animate Setting
+	// 延时1000ms 删除， 因为动画时间长为1000ms
+	function viewPortAniamte(index,innerBox) {
+		switch (index) {
+			case 0: 
+				addAniamate(innerBox[index], "fadeInDown");
+				setTimeout(function() {
+					removeAnimate(innerBox[index], "fadeInDown")
+				}, 1000);
+				break;
+			case 1:
+				addAniamate(innerBox[index], "fadeInDown");
+				setTimeout(function() {
+					removeAnimate(innerBox[index], "fadeInDown")
+				}, 1000);
+				break;
+			case 2:
+				addAniamate(innerBox[index], "fadeInDown");
+				setTimeout(function() {
+					removeAnimate(innerBox[index], "fadeInDown")
+				}, 1000);
+				break;
+			case 3:
+				addAniamate(innerBox[index], "fadeInDown");
+				setTimeout(function() {
+					removeAnimate(innerBox[index], "fadeInDown")
+				}, 1000);
+				break;
+			case 4:
+				addAniamate(innerBox[index], "fadeInDown");
+				setTimeout(function() {
+					removeAnimate(innerBox[index], "fadeInDown")
+				}, 1000);
+				break;
+
+			default:
+				console.log("index overflow")
+				break;
+		}
+	} 
+
 	// 初始化全屏高度
 	setFSHeight(config.viewCol);
 
 	// add Eventlistenr
 	linkBox.addEventListener("click", clickHandler);
-	document.addEventListener("mousewheel", wheelHandler);
+	document.addEventListener("wheel", wheelHandler);
+	// document.addEventListener("DOM")
 	window.addEventListener("resize", function() {
 	    setFSHeight(config.viewCol);
 	}, false);

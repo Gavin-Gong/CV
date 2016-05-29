@@ -24,7 +24,6 @@ a {
 }
 button {
 	box-sizing: border-box;
-	/*padding: 10px 20px;*/
 	width: 160px;
 	height: 40px;
 	color: #fff;
@@ -39,8 +38,9 @@ button:focus {
 .box {
 	display: table;
 	margin: 0 auto;
-	padding: 40px 0;
 	width: 100%;
+	width: 100vw;
+	height: 100vh;
 	text-align: center;
 	box-sizing: border-box;
 }
@@ -107,6 +107,7 @@ body {
 }
 /*top-bar*/
 .content-wrapper {
+	position: relative;
 	/*background-color: #fff;*/ 
 	/*position: absolute;*/
 	/*overflow: hidden;*/
@@ -130,9 +131,19 @@ body {
 	left: 0;
 	right: 0;
 	margin: -30px;
-	z-index: -1;
+	z-index: -3;
 	background: url(../images/banner.jpg) center center no-repeat;
 	-webkit-filter: blur(20px);
+}
+.introduction:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -2;
+	background-color: rgba(1, 1, 1, .3);
 }
 .introduction img {
 	width: 100px;
@@ -142,7 +153,7 @@ body {
 .introduction .descr{
 	margin: 20px auto;
 	display: block;
-	width: 50%;
+	width: 500px;
 	text-align: justify;
 }
 
