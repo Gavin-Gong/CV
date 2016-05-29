@@ -49,9 +49,6 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
 	    var preIndex = currIndex - 1;
 	    var nextIndex = currIndex + 1;
 
-	    // console.log(currIndex);
-	    // console.log(event.wheelDelta);
-	    // 向上滚动
 	    if(event.deltaY < 0 && currIndex > 0) {
 	    	scrollToView(preIndex);
 	    	setDotClass(config.linkCol[preIndex]);
