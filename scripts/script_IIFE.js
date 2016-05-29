@@ -52,11 +52,11 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
 	    // console.log(currIndex);
 	    // console.log(event.wheelDelta);
 	    // 向上滚动
-	    if(event.wheelDelta > 0 && currIndex > 0) {
+	    if(event.deltaY < 0 && currIndex > 0) {
 	    	scrollToView(preIndex);
 	    	setDotClass(config.linkCol[preIndex]);
 
-	    } else if(event.wheelDelta < 0 && currIndex < config.linkCol.length-1) {
+	    } else if(event.deltaY > 0 && currIndex < config.linkCol.length-1) {
 	    	scrollToView(nextIndex);
 	    	setDotClass(config.linkCol[nextIndex]);
 	    }
@@ -128,7 +128,8 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
 
 	// add Eventlistenr
 	linkBox.addEventListener("click", clickHandler);
-	document.addEventListener("mousewheel", wheelHandler);
+	document.addEventListener("wheel", wheelHandler);
+	// document.addEventListener("DOM")
 	window.addEventListener("resize", function() {
 	    setFSHeight(config.viewCol);
 	}, false);
