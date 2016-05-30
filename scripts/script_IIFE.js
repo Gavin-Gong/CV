@@ -42,21 +42,32 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
 	    scrollToView(index);
 	    setDotClass(currEle);
 	}
-
+	var canScroll = true;
 	function wheelHandler(event) {
 	    var currDot = document.querySelector(".curr-dot");
 	    var currIndex = parseInt(currDot.dataset.index);
 	    var preIndex = currIndex - 1;
 	    var nextIndex = currIndex + 1;
 
-	    if(event.deltaY < 0 && currIndex > 0) {
+	    if(event.deltaY < 0 && currIndex > 0 && canScroll) {
 	    	scrollToView(preIndex);
 	    	setDotClass(config.linkCol[preIndex]);
+	    	canScroll = false
+	    	console.log()
 
-	    } else if(event.deltaY > 0 && currIndex < config.linkCol.length-1) {
+	    } else if(canScroll && event.deltaY > 0 && currIndex < config.linkCol.length-1 ) {
 	    	scrollToView(nextIndex);
 	    	setDotClass(config.linkCol[nextIndex]);
+	    	canScroll = false
+	    } else {
+	    	return;
 	    }
+	    if(!canScroll) {
+	    	setTimeout(function() {
+    		canScroll = true;		
+	    	}, 1000);
+	    }
+    	
 	} 
 
 	// 设置定高函数 FSHeight == Full Screen Height
