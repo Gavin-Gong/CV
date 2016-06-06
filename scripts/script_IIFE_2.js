@@ -1,9 +1,11 @@
 var viewCol = document.getElementsByClassName("box");
+var viewBox = document.querySelector(".content-wrapper");
 var linkCol = document.querySelectorAll("[data-index]");
 var linkBox = document.querySelector("#nav-list");
 var viewPort = document.querySelector(".content-wrapper");
 var innerBox = document.querySelectorAll(".inner-box");
 var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerBox};
+
 
 (function(config) {
 	// Position 

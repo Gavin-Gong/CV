@@ -248,12 +248,19 @@ button:focus {
 	font-size: 14px;
 }
 
-
-
-
-
 /*works*/
-
+.works li {
+	margin-left: 80px;
+}
+.works img {
+	display: block;
+	width: 140px;
+	height: 140px;
+}
+.works-text {
+	display: inline-block;
+	margin-top: 25px;
+}
 /*works end*/
 
 /*hobbies*/
@@ -284,12 +291,21 @@ button:focus {
 	margin-top: 30px;
 }
 /*hobbies END*/
-
+.social-contact li {
+	width: 180px;
+	margin-left: 80px;
+}
 .social-contact .contact-link {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 	display: inline-block;
 	color: transparent;
 }
 .contact-link>img {
+	display: block;
 	width: 80px;
 	height: 80px;
 }
