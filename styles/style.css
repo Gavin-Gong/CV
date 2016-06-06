@@ -18,8 +18,8 @@ h6 {
 	margin: 0;
 	padding: 0;
 }
-a {
-	/*color: black;*/
+.inner-box a {
+	color: transparent;
 	text-decoration: none;
 }
 button {
