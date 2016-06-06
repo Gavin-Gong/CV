@@ -18,8 +18,15 @@ h6 {
 	margin: 0;
 	padding: 0;
 }
+body {
+	overflow: hidden;
+	text-align: center;
+	font-family: Microsoft Yahei, sans-serif;
+	letter-spacing: 1px;
+	line-height: 1.4;
+}
 .inner-box a {
-	color: transparent;
+	/*color: transparent;*/
 	text-decoration: none;
 }
 button {
@@ -75,11 +82,7 @@ button:focus {
 	margin-left: 0!important;
 }
 
-body {
-	overflow: hidden;
-	text-align: center;
-	font-family: Microsoft Yahei, sans-serif;
-}
+
 /*top-bar*/
 .top-bar {
 	position: fixed;
@@ -279,11 +282,9 @@ body {
 }
 /*hobbies END*/
 
-.social-contact {
-	color: transparent;
-}
 .social-contact .contact-link {
 	display: inline-block;
+	color: transparent;
 }
 .contact-link>img {
 	width: 80px;

@@ -17,7 +17,7 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
 	function getViewIndex(event) {
 	    if (event.target.nodeName.toLowerCase() == "a") {
 	        // var index = event.target.dataset.index;
-	        var index = event.target.getAttribute(data-index);
+	        var index = parseInt(event.target.getAttribute('data-index'));
 	        return index;
 	    } else {
 	    	return null;
