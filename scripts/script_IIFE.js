@@ -94,9 +94,9 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
 	function viewPortAniamte(index,innerBox) {
 		switch (index) {
 			case 0: 
-				addAniamate(innerBox[index], "fadeInDown");
+				addAniamate(innerBox[index], "zoomInDown");
 				setTimeout(function() {
-					removeAnimate(innerBox[index], "fadeInDown")
+					removeAnimate(innerBox[index], "zoomInDown")
 				}, 1000);
 				break;
 			case 1:
@@ -106,21 +106,21 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
 				}, 1000);
 				break;
 			case 2:
-				addAniamate(innerBox[index], "fadeInDown");
+				addAniamate(innerBox[index], "rollIn");
 				setTimeout(function() {
-					removeAnimate(innerBox[index], "fadeInDown")
+					removeAnimate(innerBox[index], "rollIn")
 				}, 1000);
 				break;
 			case 3:
-				addAniamate(innerBox[index], "fadeInDown");
+				addAniamate(innerBox[index], "bounceInDown");
 				setTimeout(function() {
-					removeAnimate(innerBox[index], "fadeInDown")
+					removeAnimate(innerBox[index], "bounceInDown")
 				}, 1000);
 				break;
 			case 4:
-				addAniamate(innerBox[index], "fadeInDown");
+				addAniamate(innerBox[index], "lightSpeedIn");
 				setTimeout(function() {
-					removeAnimate(innerBox[index], "fadeInDown")
+					removeAnimate(innerBox[index], "lightSpeedIn")
 				}, 1000);
 				break;
 
