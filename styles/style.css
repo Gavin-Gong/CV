@@ -19,7 +19,7 @@ h6 {
 	padding: 0;
 }
 a {
-	color: black;
+	/*color: black;*/
 	text-decoration: none;
 }
 button {
@@ -264,7 +264,11 @@ body {
 .hobbies .list-box>li {
 	margin-left: 100px;
 }
+.hobby-link a {
+	color: transparent;
+}
 .hobby-link img {
+	color: transparent;
 	display: block;
 	width: 100px;
 	height: 100px;
@@ -276,7 +280,7 @@ body {
 /*hobbies END*/
 
 .social-contact {
-	/*padding: 80px 0 130px;*/
+	color: transparent;
 }
 .social-contact .contact-link {
 	display: inline-block;

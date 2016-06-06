@@ -9,16 +9,15 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
 	// Position 
 	function scrollToView(index) {
 	    if (index != null) {
-	    	// document.body.scrollTop = -index * window.innerHeight;
 	    	viewPort.style.top = -(index * window.innerHeight) + "px";
 	    	viewPortAniamte(index, config.innerBox);
 	    }
 	}
 	//通过获取a标签的index, 获取要显示的部分
 	function getViewIndex(event) {
-	    // console.log(event.target.nodeName);
 	    if (event.target.nodeName.toLowerCase() == "a") {
-	        var index = event.target.dataset.index;
+	        // var index = event.target.dataset.index;
+	        var index = event.target.getAttribute(data-index);
 	        return index;
 	    } else {
 	    	return null;
@@ -45,7 +44,7 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
 	var canScroll = true;
 	function wheelHandler(event) {
 	    var currDot = document.querySelector(".curr-dot");
-	    var currIndex = parseInt(currDot.dataset.index);
+	    var currIndex = parseInt(currDot.getAttribute('data-index'));
 	    var preIndex = currIndex - 1;
 	    var nextIndex = currIndex + 1;
 
@@ -53,7 +52,7 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
 	    	scrollToView(preIndex);
 	    	setDotClass(config.linkCol[preIndex]);
 	    	canScroll = false
-	    	console.log()
+	    	// console.log()
 
 	    } else if(canScroll && event.deltaY > 0 && currIndex < config.linkCol.length-1 ) {
 	    	scrollToView(nextIndex);
@@ -87,7 +86,7 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
 	function removeAnimate(Element, MotionName) {
 		Element.className = Element.className.replace(' animated', "");
 		Element.className = Element.className.replace(" " + MotionName, "");
-		console.log(Element.className);
+		// console.log(Element.className);
 	}
 
 	// Animate Setting
