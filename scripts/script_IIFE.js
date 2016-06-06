@@ -66,7 +66,6 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
     		canScroll = true;		
 	    	}, 1000);
 	    }
-    	
 	} 
 
 	// 设置定高函数 FSHeight == Full Screen Height
@@ -88,7 +87,6 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
 		Element.className = Element.className.replace(" " + MotionName, "");
 		// console.log(Element.className);
 	}
-
 	// Animate Setting
 	// 延时1000ms 删除， 因为动画时间长为1000ms
 	function viewPortAniamte(index,innerBox) {
@@ -136,7 +134,6 @@ var config = {viewCol:viewCol, linkCol:linkCol, linkBox:linkBox, innerBox:innerB
 	// add Eventlistenr
 	linkBox.addEventListener("click", clickHandler);
 	document.addEventListener("wheel", wheelHandler);
-	// document.addEventListener("DOM")
 	window.addEventListener("resize", function() {
 	    setFSHeight(config.viewCol);
 	}, false);
