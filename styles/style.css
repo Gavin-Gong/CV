@@ -187,6 +187,9 @@ button:focus {
 .skills li:nth-child(3) {
 	background: url(../images/js_icon.png) top center no-repeat;
 }
+.skills li:nth-child(4) {
+	background: url(../images/vue_icon.png) top center no-repeat;
+}
 
 .skills h2 {
 	font-size: 20px;
